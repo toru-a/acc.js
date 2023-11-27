@@ -1,5 +1,5 @@
 .accordion {
-	width: 500px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -11,6 +11,11 @@
 	color: #FFF;
 	border-top: 1px solid #fff;
 }
+
+.accordion-trigger:hover{
+	background-color: black;
+}
+
 .accordion-contents {
 	margin: 0;
 	padding: 10px;
