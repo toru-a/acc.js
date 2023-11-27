@@ -14,13 +14,16 @@
 			let index = 0;
 			while (index < triggerLen) {
 				$trigger[index].addEventListener('click', (e) => this.clickHandler(e));	
-				index++;
+				index++;　　
+				// ここのthisはconstructorを指す？
 			}
 		}
 
-		//クリックしたら実行される処理
+		
 		clickHandler(e){
-			e.preventDefault();
+
+			// リンクタグのときは必要。今回はpタグ
+			// e.preventDefault();
 
 			const $target = e.currentTarget;
 			const $content = $target.nextElementSibling;
@@ -40,12 +43,12 @@
 
 	const dummyAccordion = new Accordion({
 		hookName: '#js-accordion',
-		tagName: 'a'
+		tagName: 'p'
 	});
 
 	const miniAccordion = new Accordion({
 		hookName: '#js-accordion-mini',
-		tagName: 'dt'
+		tagName: 'p'
 	});
 
 
